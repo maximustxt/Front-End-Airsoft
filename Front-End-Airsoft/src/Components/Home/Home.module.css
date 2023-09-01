@@ -50,4 +50,16 @@
     align-content: center;
     align-items: center;
   }
+  .Imagenes img {
+    width: 90%;
+  }
+  .Imagenes p {
+    width: 100%;
+  }
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
 }
