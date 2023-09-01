@@ -148,13 +148,7 @@ const Carrito = () => {
         {/*---------------------------Linea separadora Naranja------------------------*/}
         <div className={Style.LineaSeparadora}></div>
         {/*---------------------------------------------------------------------------*/}
-        <div
-          className={
-            ArrayCarrito.length
-              ? Style.ContainerCardCarrito
-              : Style.ContainerCardCarritoNull
-          }
-        >
+        <div className={Style.ContainerCardCarrito}>
           {ArrayCarrito.map(
             ({ id, Imagen, PrecioUnitario, Name, Stock, Contador }) => (
               <div className={Style.CardCarrito}>
