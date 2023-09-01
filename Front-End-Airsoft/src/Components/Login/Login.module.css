@@ -1,0 +1,68 @@
+.Imagen {
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 60px;
+}
+
+.ContainerPadre {
+  position: relative;
+}
+
+.ContainerHijo {
+  position: absolute;
+  right: -70px;
+  padding: 20px 20px;
+  background-color: rgb(52, 61, 55);
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  z-index: 10000000;
+}
+
+.ContainerHijo a {
+  color: #ffffff;
+  margin-left: 5px;
+  padding: 5px 5px;
+}
+
+.ContainerHijoOutsai {
+  display: none;
+}
+
+.ContainerPerfilIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContainerPerfilIcon:hover {
+  background-color: rgb(219, 219, 219);
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .Imagen {
+    width: 40px;
+  }
+
+  .ContainerHijo {
+    position: absolute;
+    right: -80px;
+    padding: 20px 20px;
+    background-color: rgb(52, 61, 55);
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    z-index: 10000000;
+  }
+}

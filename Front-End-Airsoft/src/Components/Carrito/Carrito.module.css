@@ -1,0 +1,165 @@
+/*--------------Estilos Carrito---------------*/
+
+.ContainerCarritoOpen {
+  overflow: auto; /* Mostrar la barra de desplazamiento cuando sea necesario */
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #060505;
+  width: 100%;
+  height: 100%;
+  z-index: 300000000000000000000000000000000;
+  transition: all 0.5s ease-in-out;
+}
+
+.ContainerCarritoOpen body {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.ContainerCarritoOutside {
+  position: absolute;
+  top: 60px;
+  top: -1000px;
+  background-color: #060505;
+  width: 500px;
+  height: 100vh;
+  z-index: 300000000000000000000000000000000;
+  transition: all 0.5s ease-in;
+}
+
+.BtnOutsideMenuCarrito {
+  background-color: transparent;
+  color: #838080;
+  font-size: 25px;
+  width: fit-content;
+  padding: none;
+  height: fit-content;
+}
+
+.BtnOutsideMenuCarrito:hover {
+  color: #fff;
+}
+
+.ContainerBoton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContainerBoton h3 {
+  color: #fff;
+}
+
+.BotonIniciarCompra {
+  padding: 15px 25px;
+  background-color: #e97c17;
+  border: 2px solid #e97c17;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  fill: #fff;
+  width: 80%;
+  line-height: 18px;
+  letter-spacing: 2px;
+}
+
+.ContainerCardCarrito {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ContainerBoton {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.BTNVerMasProductos {
+  padding: 10px 15px;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  color: #e97c17;
+  fill: #e97c17;
+  cursor: pointer;
+  background-color: transparent;
+  width: fit-content;
+  border: 1px solid rgb(3, 3, 104);
+}
+
+.ContainerBotonVerMasProductos {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.LineaSeparadora {
+  width: 100%;
+  height: 1.5px;
+  background-color: #e97c17;
+}
+
+.TotalPrecio {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 2px;
+  color: #e97c17;
+}
+
+.ContainerTotalPrecio {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 50px;
+}
+
+.CardCarrito {
+  width: 100%;
+  height: fit-content;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+.CardCarrito img {
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+}
+
+.CardCarrito p {
+  font-size: 12px;
+}
+
+.Precio {
+  margin: 15px;
+}
+
+.BTNContador {
+  width: fit-content;
+  height: fit-content;
+  background: transparent;
+  color: #e97c17;
+}
+
+@media (max-width: 810px) {
+  .ContainerCarritoOpen {
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .ContainerCarritoOutside {
+    position: absolute;
+    top: -1000px;
+    background-color: #060505;
+    width: 500px;
+    height: 100vh;
+    z-index: 300000000000000000000000000000000;
+    transition: all 0.5s ease-in;
+  }
+}

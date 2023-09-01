@@ -1,0 +1,44 @@
+.Container {
+  margin-top: 50px;
+  padding: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ContainerArticulos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.ContainerDiversosProductos {
+  margin-top: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.ContainerDiversosProductos img {
+  margin: 10px;
+}
+
+.Imagenes {
+  width: fit-content;
+  position: relative;
+  margin: 5px;
+}
+
+.Imagenes p {
+  z-index: 1000;
+  color: #fff;
+  position: absolute;
+  bottom: 0px;
+  background-color: #42423f;
+  width: 100%;
+  font-size: 20px;
+}
+
+.ContainerDiversosProductos {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,15 @@
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 200px;
+  color: aliceblue;
+}
+
+@media (max-width: 500px) {
+  .Footer {
+    text-align: center;
+  }
+}

@@ -1,0 +1,83 @@
+.ContainerInfoUser {
+  width: 400px;
+  text-align: center;
+}
+
+.ContainerInfoUser img {
+  border-radius: 10px;
+}
+
+.ContainerDatosCompra {
+  width: 800px;
+}
+
+.Container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+/*----Css de las Compras del usuario----*/
+
+.ContainerMisCompras {
+  width: 400px;
+  padding: 10px 10px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  -webkit-box-shadow: 0px -1px 17px 6px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px -1px 17px 6px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px -1px 17px 6px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+}
+
+.ContainerMisCompras img {
+  width: 100px;
+  height: fit-content;
+}
+
+.ContainerMisCompras p {
+  text-align: center;
+  width: 200px;
+}
+
+/*--------------------------------------*/
+
+@media (max-width: 1200px) {
+  .Container {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column;
+    align-content: center; */
+    align-items: center;
+  }
+
+  .ContainerDatosCompra {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .ContainerMisCompras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: fit-content;
+  }
+  .ContainerDatosCompra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  .ContainerDatosCompra hr {
+    width: 100%;
+  }
+}

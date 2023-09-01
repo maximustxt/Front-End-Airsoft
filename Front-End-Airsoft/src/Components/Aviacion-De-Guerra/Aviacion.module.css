@@ -1,0 +1,15 @@
+.Container {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+}
+
+@media (max-width: 500px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+}

@@ -1,0 +1,10 @@
+.Container {
+  margin-top: 100px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+}
+.ContainerArticulos {
+  display: flex;
+  flex-wrap: wrap;
+}

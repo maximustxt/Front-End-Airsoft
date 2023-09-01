@@ -1,0 +1,20 @@
+.ContainerArma {
+  margin: 30px;
+  display: block;
+  width: 300px;
+  text-align: center;
+  padding: 10px 10px;
+  -webkit-box-shadow: 0px -1px 17px 6px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px -1px 17px 6px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px -1px 17px 6px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+}
+
+.ImagenpaisDeCreacion {
+  width: 50px;
+  border: 1px solid;
+}
+
+.link {
+  cursor: pointer;
+}

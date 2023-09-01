@@ -1,0 +1,77 @@
+.Container {
+  margin-top: 110px;
+}
+
+.ContainerImg {
+  display: flex;
+  justify-content: center;
+}
+
+/* No seleccion de Imagenes */
+.ContainerImgNoSelect {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #000000;
+  margin: 10px;
+  padding: 5px 5px;
+  opacity: 0.3;
+}
+
+.ContainerImgNoSelect img {
+  width: 50px;
+  height: 50px;
+}
+
+/* seleccion de Imagenes */
+
+.ContainerImagenSelect {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ffce00;
+  margin: 10px;
+  padding: 5px 5px;
+}
+
+.ContainerImagenSelect img {
+  width: 50px;
+  height: 50px;
+}
+
+.ContainerImgSelect {
+  display: flex;
+  justify-content: center;
+}
+
+.ContainerImgSelect img {
+  width: 300px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.ContainerCompra {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 110px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+button {
+  padding: 20px 20px;
+  border: 0px;
+  width: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ffce00;
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+}
+
+.ContainerDescripcion {
+  padding: 10px 100px;
+}
