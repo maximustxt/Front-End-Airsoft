@@ -97,11 +97,6 @@ const Carrito = () => {
       .catch((error) => alert(error.response.data));
   };
 
-  const FuncionOutsideMenuCarrito = () => {
-    document.body.style.overflow = "auto";
-    // SetOpenMenuCarrito(!openMenuCarrito);
-  };
-
   //*----------------------------------------------Funciones Que Modifican El Contador:
 
   const FuncionIncrementarContador = (

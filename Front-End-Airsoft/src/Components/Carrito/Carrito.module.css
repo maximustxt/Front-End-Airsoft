@@ -136,7 +136,13 @@
 }
 
 @media (max-width: 810px) {
-  .ContainerCarritoOpen {
-    height: 100vh;
+}
+
+@media (max-width: 500px) {
+  .CardCarrito {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    align-content: center;
   }
 }

@@ -48,8 +48,8 @@ const Login = () => {
           toast.error(response.data);
         })
         .catch((error: any) => {});
-      logout({ logoutParams: { returnTo: window.location.origin } });
     }
+    logout({ logoutParams: { returnTo: window.location.origin } });
   };
 
   const FuncionPosteoUser = () => {
@@ -62,9 +62,9 @@ const Login = () => {
 
       axios
         .post(`https://servidor-airsoft.onrender.com/Usuarios`, ObjetoBody)
-        .then((response) => response)
+        .then((response) => console.log(response.data))
         .catch((error: any) => {
-          console.error(error.message);
+          console.error(error.response.data.error);
         });
 
       //-------------Obtengo los datos del usuario:
@@ -74,10 +74,13 @@ const Login = () => {
           `https://servidor-airsoft.onrender.com/Usuarios/${ObjetoBody.email}`
         )
         .then((response) => {
-          UsuarioPostLocalStorage({ ...response.data, Imagen: user?.picture });
+          console.log(response.data);
+          if (user) {
+            UsuarioPostLocalStorage(response.data);
+          }
         })
         .catch((error: any) => {
-          console.error(error.message);
+          console.error(error.response.data.error);
         });
     }
   };
@@ -94,11 +97,7 @@ const Login = () => {
 
       {isAuthenticated && (
         <div className={Style.ContainerPadre}>
-          <img
-            className={Style.Imagen}
-            src={UsuarioGetLocalStorage().Imagen}
-            alt={user?.name}
-          />
+          <img className={Style.Imagen} src={user?.picture} alt={user?.name} />
           {menuPerfil ? (
             <a onClick={() => FuncionOpenMenu()}>
               <FontAwesomeIcon icon={faAngleUp} color="white" />
