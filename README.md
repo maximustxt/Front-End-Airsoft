@@ -21,8 +21,6 @@ npm start
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
 
 ## En Caso de no querer clonar y hacer todo el proceso dejo el deploy del proyecto completo 😉😉 :
 
