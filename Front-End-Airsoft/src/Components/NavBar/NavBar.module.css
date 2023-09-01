@@ -173,3 +173,13 @@ section a:hover {
     color: #fff;
   }
 }
+
+@media (max-whidt: 500px) {
+  .ContainerFlechas p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .ContainerFlechas {
+    width: 300px;
+  }
+}

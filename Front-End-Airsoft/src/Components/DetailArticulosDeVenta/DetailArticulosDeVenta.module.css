@@ -75,3 +75,9 @@ button {
 .ContainerDescripcion {
   padding: 10px 100px;
 }
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 20px;
+  }
+}
