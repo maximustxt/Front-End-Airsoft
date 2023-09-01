@@ -1,5 +1,11 @@
 /*--------------Estilos Carrito---------------*/
 
+.ContainerCardCarritoNull {
+  background-color: #060505;
+  width: 100%;
+  height: 100%;
+}
+
 .ContainerCarritoOpen {
   background-color: #060505;
   width: 100%;
@@ -136,8 +142,8 @@
 }
 
 @media (max-width: 810px) {
-  .ContainerCarritoOpen {
-    height: fit-content;
+  .ContainerCardCarritoNull {
+    height: 100vh;
   }
 }
 
