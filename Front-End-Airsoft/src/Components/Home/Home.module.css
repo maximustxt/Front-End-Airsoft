@@ -3,8 +3,9 @@
   padding: 10px 30px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-content: center;
 }
+
 .ContainerArticulos {
   display: flex;
   flex-wrap: wrap;
