@@ -20,12 +20,9 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   FuncionObtenerPrecioTotal,
   FuncionObtenerCantidadCarrito,
-  FuncionObtenerCarrito,
 } from "../../Redux/Actions/Funcion_Actions";
 //- LOCAL STORAGE :
 import UsuarioGetLocalStorage from "../LocalStorage/Usuario/UsuarioGetLocalStorage";
-//- Components:
-import Carrito from "../Carrito/Carrito";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -61,12 +58,6 @@ const NavBar = () => {
       toast.error("Debes Loguearte para poder ir al carrito");
     } else {
       document.location.href = "/Carrito";
-      // SetOpenMenuCarrito(!openMenuCarrito);
-      // //- Obtenemos el carrito:
-      // dispatch(FuncionObtenerCarrito(UsuarioGetLocalStorage().id));
-      // //- PRECIO TOTAL:
-      // dispatch(FuncionObtenerPrecioTotal(UsuarioGetLocalStorage().id));
-      // document.body.style.overflow = "hidden";
     }
   };
 
