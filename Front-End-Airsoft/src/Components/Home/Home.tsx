@@ -21,6 +21,10 @@ const Home = () => {
   const dispatch = useDispatch();
   const Productos: Producto[] = useSelector((state: any) => state.Productos);
 
+  useEffect(() => {
+    localStorage.removeItem("Usuarios");
+  }, []);
+
   const ArrayDeImagenesProductos = [
     {
       Imagen:

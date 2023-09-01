@@ -70,13 +70,16 @@ const Login = () => {
       //-------------Obtengo los datos del usuario:
 
       axios
-        .get(
-          `https://servidor-airsoft.onrender.com/Usuarios/${ObjetoBody.email}`
-        )
+        .get(`https://servidor-airsoft.onrender.com/Usuarios`)
         .then((response) => {
           console.log(response.data);
           if (user) {
-            UsuarioPostLocalStorage(response.data);
+            UsuarioPostLocalStorage(
+              response.data.find(
+                (e: { name: string; email: string; id: string }) =>
+                  e.email === user?.email
+              )
+            );
           }
         })
         .catch((error: any) => {
