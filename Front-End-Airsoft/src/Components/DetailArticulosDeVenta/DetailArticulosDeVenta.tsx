@@ -12,7 +12,6 @@ import DetailArticulosDeVentas from "../../Interfaces/DetailArticulosDeVenta";
 import Style from "./DetailArticulosDeVenta.module.css";
 
 //- LOCAL STORAGE:
-import GetLocalStorage from "../LocalStorage/Usuario/UsuarioGetLocalStorage";
 import UsuarioGetLocalStorage from "../LocalStorage/Usuario/UsuarioGetLocalStorage";
 //- Components:
 import Footer from "../Footer/Footer";
@@ -50,7 +49,7 @@ const DetailArticulosDeVenta = () => {
       axios
         .post(
           `https://servidor-airsoft.onrender.com/Carrito/${
-            GetLocalStorage().id
+            UsuarioGetLocalStorage().id
           }`,
           Details
         )
