@@ -20,7 +20,11 @@ const Perfil = () => {
   useEffect(() => {
     if (UsuarioGetLocalStorage()) {
       axios
-        .get(`http://localhost:3001/Compras/${UsuarioGetLocalStorage().id}`)
+        .get(
+          `https://servidor-airsoft.onrender.com/Compras/${
+            UsuarioGetLocalStorage().id
+          }`
+        )
         .then((response) => {
           console.log(response.data);
           SetCompra(response.data);

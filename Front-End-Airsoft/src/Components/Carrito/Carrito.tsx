@@ -55,7 +55,9 @@ const Carrito = ({ openMenuCarrito, SetOpenMenuCarrito }: Props) => {
     } else {
       axios
         .post(
-          `http://localhost:3001/Mercado_Pago/${UsuarioGetLocalStorage().id}`
+          `https://servidor-airsoft.onrender.com/Mercado_Pago/${
+            UsuarioGetLocalStorage().id
+          }`
         )
         .then((response) => {
           // Redirigir al usuario a la URL de pago
@@ -76,7 +78,7 @@ const Carrito = ({ openMenuCarrito, SetOpenMenuCarrito }: Props) => {
     DeleteIdCarritoLocalStorage();
     axios
       .delete(
-        `http://localhost:3001/Carrito/${id}?idUser=${
+        `https://servidor-airsoft.onrender.com/Carrito/${id}?idUser=${
           UsuarioGetLocalStorage().id
         }`
       )

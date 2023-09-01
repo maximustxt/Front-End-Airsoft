@@ -12,7 +12,7 @@ const Cañones = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/Canones_De_Guerra")
+      .get("https://servidor-airsoft.onrender.com/Canones_De_Guerra")
       .then((response) => {
         SetCañones(response.data); // Corregido aquí
       })

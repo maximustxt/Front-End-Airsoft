@@ -17,7 +17,7 @@ const Detail = () => {
   useEffect(() => {
     // buscar el detail del producto
     axios
-      .get(`http://localhost:3001/Detail/${id}`)
+      .get(`https://servidor-airsoft.onrender.com/Detail/${id}`)
       .then((response: { data: Naval }) => {
         SetDetail(response.data); // Corregido aquí
       })

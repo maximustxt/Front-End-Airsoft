@@ -15,7 +15,7 @@ const Armas = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/Armas_De_Guerra")
+      .get("https://servidor-airsoft.onrender.com/Armas_De_Guerra")
       .then((response) => {
         SetArrayArmas(response.data); // Corregido aquí
       })

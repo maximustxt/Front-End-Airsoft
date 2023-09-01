@@ -12,7 +12,7 @@ const Vehiculos = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/Veiculos_De_Guerra")
+      .get("https://servidor-airsoft.onrender.com/Veiculos_De_Guerra")
       .then((response) => {
         SetVehiculos(response.data); // Corregido aquí
       })

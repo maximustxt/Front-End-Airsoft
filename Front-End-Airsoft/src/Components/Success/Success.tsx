@@ -12,14 +12,18 @@ const Success = () => {
   useEffect(() => {
     if (UsuarioGetLocalStorage().id) {
       axios
-        .get(`http://localhost:3001/Carrito/${UsuarioGetLocalStorage().id}`)
+        .get(
+          `https://servidor-airsoft.onrender.com/Carrito/${
+            UsuarioGetLocalStorage().id
+          }`
+        )
         .then((response) => {
           //- Guardo y creo las compras que realice:
           if (response.data.length) {
             response.data.map((e: any) =>
               axios
                 .post(
-                  `http://localhost:3001/Compras/${
+                  `https://servidor-airsoft.onrender.com/Compras/${
                     UsuarioGetLocalStorage().id
                   }`,
                   e
@@ -31,7 +35,9 @@ const Success = () => {
         });
       //- Se vacia el carrito:
       axios
-        .delete("http://localhost:3001/Carrito/Eliminar_Todo_El_Carrito")
+        .delete(
+          "https://servidor-airsoft.onrender.com/Carrito/Eliminar_Todo_El_Carrito"
+        )
         .then((response) => response)
         .catch((error) => error);
     }

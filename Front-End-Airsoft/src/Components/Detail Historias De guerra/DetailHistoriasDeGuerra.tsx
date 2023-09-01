@@ -17,7 +17,9 @@ const DetailHistoriasDeGuerra = () => {
   useEffect(() => {
     // buscar el detail del producto
     axios
-      .get(`http://localhost:3001/Historias-De-Guerra/Detail/${id}`)
+      .get(
+        `https://servidor-airsoft.onrender.com/Historias-De-Guerra/Detail/${id}`
+      )
       .then((response: { data: HistoriaDeGuerraDetail }) => {
         SetDetail(response.data); // Corregido aquí
       })

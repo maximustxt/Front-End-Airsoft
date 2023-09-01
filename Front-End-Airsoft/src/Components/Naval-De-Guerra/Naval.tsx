@@ -12,7 +12,7 @@ const Naval = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/Barcos_Submarinos_De_Guerra")
+      .get("https://servidor-airsoft.onrender.com/Barcos_Submarinos_De_Guerra")
       .then((response) => {
         SetNaval(response.data); // Corregido aquí
       })

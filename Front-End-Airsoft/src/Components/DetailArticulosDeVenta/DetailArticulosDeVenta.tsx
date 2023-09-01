@@ -27,7 +27,9 @@ const DetailArticulosDeVenta = () => {
     window.scroll(0, 0);
     // buscar el detail del producto
     axios
-      .get(`http://localhost:3001/Articulos_De_Venta/Detail/${id}`)
+      .get(
+        `https://servidor-airsoft.onrender.com/Articulos_De_Venta/Detail/${id}`
+      )
       .then((response: { data: DetailArticulosDeVentas }) => {
         SetDetail(response.data); // Corregido aquí
       })
@@ -46,7 +48,12 @@ const DetailArticulosDeVenta = () => {
       toast.error("Debes Loguearte para poder comprar");
     } else {
       axios
-        .post(`http://localhost:3001/Carrito/${GetLocalStorage().id}`, Details)
+        .post(
+          `https://servidor-airsoft.onrender.com/Carrito/${
+            GetLocalStorage().id
+          }`,
+          Details
+        )
         .then((response: { data: DetailArticulosDeVentas }) => {
           //- Pedimos la cantidad:
           dispatch(FuncionObtenerCantidadCarrito(UsuarioGetLocalStorage().id));
@@ -58,7 +65,7 @@ const DetailArticulosDeVenta = () => {
 
       axios
         .delete(
-          `http://localhost:3001/Carrito/${id}?idUser=${
+          `https://servidor-airsoft.onrender.com/Carrito/${id}?idUser=${
             UsuarioGetLocalStorage().id
           }`
         )

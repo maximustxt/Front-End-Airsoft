@@ -15,7 +15,7 @@ const Aviacion = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/Aviones_De_Combate")
+      .get("https://servidor-airsoft.onrender.com/Aviones_De_Combate")
       .then((response) => {
         SetArrayAviacion(response.data); // Corregido aquí
       })

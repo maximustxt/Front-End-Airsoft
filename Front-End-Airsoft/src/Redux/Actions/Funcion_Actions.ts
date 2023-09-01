@@ -17,7 +17,7 @@ export const FuncionGetProductos = (): any => {
   return async (dispatch: Dispatch) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/Articulos_De_Venta`
+        `https://servidor-airsoft.onrender.com/Articulos_De_Venta`
       );
       dispatch({ type: PRODUCTOS, payload: response.data });
     } catch (error: any) {
@@ -41,7 +41,7 @@ export const FuncionGetHistoriasDeGuerra = (): any => {
   return async (dispatch: Dispatch) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/Historias-De-Guerra`
+        `https://servidor-airsoft.onrender.com/Historias-De-Guerra`
       );
       dispatch({ type: HISTORIA_DE_GUERRA, payload: response.data });
     } catch (error: any) {
@@ -56,7 +56,7 @@ export const FuncionObtenerPrecioTotal = (idUser: string): any => {
   return async (dispatch: Dispatch) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/Carrito/TotalPrecio/${idUser}`
+        `https://servidor-airsoft.onrender.com/Carrito/TotalPrecio/${idUser}`
       );
       dispatch({ type: PRECIO_TOTAL, payload: response.data });
     } catch (error: any) {
@@ -71,7 +71,7 @@ export const FuncionObtenerCantidadCarrito = (idUser: string): any => {
   return async (dispatch: Dispatch) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/Carrito/Longitud_Carrito/${idUser}`
+        `https://servidor-airsoft.onrender.com/Carrito/Longitud_Carrito/${idUser}`
       );
       dispatch({ type: CANTIDAD_CARRITO, payload: response.data });
     } catch (error: any) {
@@ -91,7 +91,7 @@ export const FuncionModificarContador = (
   return async (dispatch: Dispatch) => {
     try {
       const response = await axios.put(
-        `http://localhost:3001/Contador/${idUser}?idCarrito=${idCarrito}&&InfoContador=${InfoContador}`,
+        `https://servidor-airsoft.onrender.com/Contador/${idUser}?idCarrito=${idCarrito}&&InfoContador=${InfoContador}`,
         { ValorContador }
       );
       dispatch({ type: CONTADOR_CARRITO, payload: response.data });
@@ -110,7 +110,7 @@ export const FuncionObtenerContador = (
   return async (dispatch: Dispatch) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/Contador/${idUser}?idCarrito=${idCarrito}`
+        `https://servidor-airsoft.onrender.com/Contador/${idUser}?idCarrito=${idCarrito}`
       );
       dispatch({ type: CONTADOR_CARRITO, payload: response.data });
     } catch (error: any) {
@@ -125,7 +125,7 @@ export const FuncionObtenerCarrito = (idUser: string): any => {
   return async (dispatch: Dispatch) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/Carrito/${idUser}`
+        `https://servidor-airsoft.onrender.com/Carrito/${idUser}`
       );
       dispatch({ type: CARRITO, payload: response.data });
     } catch (error: any) {
