@@ -60,14 +60,13 @@ const NavBar = () => {
     if (!UsuarioGetLocalStorage()) {
       toast.error("Debes Loguearte para poder ir al carrito");
     } else {
-      SetOpenMenuCarrito(!openMenuCarrito);
-      //- Obtenemos el carrito:
-      dispatch(FuncionObtenerCarrito(UsuarioGetLocalStorage().id));
-
-      //- PRECIO TOTAL:
-      dispatch(FuncionObtenerPrecioTotal(UsuarioGetLocalStorage().id));
-
-      document.body.style.overflow = "hidden";
+      document.location.href = "/Carrito";
+      // SetOpenMenuCarrito(!openMenuCarrito);
+      // //- Obtenemos el carrito:
+      // dispatch(FuncionObtenerCarrito(UsuarioGetLocalStorage().id));
+      // //- PRECIO TOTAL:
+      // dispatch(FuncionObtenerPrecioTotal(UsuarioGetLocalStorage().id));
+      // document.body.style.overflow = "hidden";
     }
   };
 
@@ -145,11 +144,7 @@ const NavBar = () => {
         </div>
         <span className={Style.BordeNav}></span>
       </main>
-      {/*----------------------------------CARRITO---------------------------------------*/}
-      <Carrito
-        openMenuCarrito={openMenuCarrito}
-        SetOpenMenuCarrito={SetOpenMenuCarrito}
-      />
+      {/*----------------------------------Alerts---------------------------------------*/}
       <Toaster position="bottom-left" reverseOrder={true} />
       {/*--------------------------------------------------------------------------------*/}
     </>

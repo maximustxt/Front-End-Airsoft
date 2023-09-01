@@ -12,6 +12,7 @@ import DetailHistoriasDeGuerra from "./Components/Detail Historias De guerra/Det
 import DetailArticulosDeVenta from "./Components/DetailArticulosDeVenta/DetailArticulosDeVenta";
 import Perfil from "./Components/Perfil/Perfil";
 import Success from "./Components/Success/Success";
+import Carrito from "./Components/Carrito/Carrito";
 
 //- Productos:
 import Indumentarias from "./Components/Productos/Indumentarias/Indumentarias";
@@ -45,6 +46,7 @@ function App() {
         path="/DetailArticuloDeVenta/:id"
         element={<DetailArticulosDeVenta />}
       />
+      <Route path="/Carrito" element={<Carrito />} />
 
       {/*---------------PRODUCTOS----------------*/}
       <Route path="/Armas" element={<Armas_Producto />} />

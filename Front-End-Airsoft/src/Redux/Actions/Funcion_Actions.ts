@@ -20,9 +20,7 @@ export const FuncionGetProductos = (): any => {
         `https://servidor-airsoft.onrender.com/Articulos_De_Venta`
       );
       dispatch({ type: PRODUCTOS, payload: response.data });
-    } catch (error: any) {
-      alert(error.massage);
-    }
+    } catch (error: any) {}
   };
 };
 
@@ -44,9 +42,7 @@ export const FuncionGetHistoriasDeGuerra = (): any => {
         `https://servidor-airsoft.onrender.com/Historias-De-Guerra`
       );
       dispatch({ type: HISTORIA_DE_GUERRA, payload: response.data });
-    } catch (error: any) {
-      alert(error.massage);
-    }
+    } catch (error: any) {}
   };
 };
 
@@ -59,9 +55,7 @@ export const FuncionObtenerPrecioTotal = (idUser: string): any => {
         `https://servidor-airsoft.onrender.com/Carrito/TotalPrecio/${idUser}`
       );
       dispatch({ type: PRECIO_TOTAL, payload: response.data });
-    } catch (error: any) {
-      alert(error.response.data);
-    }
+    } catch (error: any) {}
   };
 };
 
@@ -74,9 +68,7 @@ export const FuncionObtenerCantidadCarrito = (idUser: string): any => {
         `https://servidor-airsoft.onrender.com/Carrito/Longitud_Carrito/${idUser}`
       );
       dispatch({ type: CANTIDAD_CARRITO, payload: response.data });
-    } catch (error: any) {
-      alert(error.response.data);
-    }
+    } catch (error: any) {}
   };
 };
 
@@ -95,9 +87,7 @@ export const FuncionModificarContador = (
         { ValorContador }
       );
       dispatch({ type: CONTADOR_CARRITO, payload: response.data });
-    } catch (error: any) {
-      // alert(error.response.data);
-    }
+    } catch (error: any) {}
   };
 };
 
@@ -113,9 +103,7 @@ export const FuncionObtenerContador = (
         `https://servidor-airsoft.onrender.com/Contador/${idUser}?idCarrito=${idCarrito}`
       );
       dispatch({ type: CONTADOR_CARRITO, payload: response.data });
-    } catch (error: any) {
-      // alert(error.response.data);
-    }
+    } catch (error: any) {}
   };
 };
 
@@ -128,8 +116,6 @@ export const FuncionObtenerCarrito = (idUser: string): any => {
         `https://servidor-airsoft.onrender.com/Carrito/${idUser}`
       );
       dispatch({ type: CARRITO, payload: response.data });
-    } catch (error: any) {
-      // alert(error.response.data);
-    }
+    } catch (error: any) {}
   };
 };

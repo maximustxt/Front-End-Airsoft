@@ -26,7 +26,8 @@ import UsuarioGetLocalStorage from "../LocalStorage/Usuario/UsuarioGetLocalStora
 import DeleteIdCarritoLocalStorage from "../LocalStorage/Id-Carrito/DeleteIdCarritoLocalStorage";
 import PostIdCarritoLocalStorage from "../LocalStorage/Id-Carrito/PostIdCarritoLocalStorage";
 
-const Carrito = ({ openMenuCarrito, SetOpenMenuCarrito }: Props) => {
+// const Carrito = ({ openMenuCarrito, SetOpenMenuCarrito }: Props) => {
+const Carrito = () => {
   const dispatch = useDispatch();
   const Precio_Total = useSelector(
     (state: StateGlobalRedux) => state.Precio_Total
@@ -98,7 +99,7 @@ const Carrito = ({ openMenuCarrito, SetOpenMenuCarrito }: Props) => {
 
   const FuncionOutsideMenuCarrito = () => {
     document.body.style.overflow = "auto";
-    SetOpenMenuCarrito(!openMenuCarrito);
+    // SetOpenMenuCarrito(!openMenuCarrito);
   };
 
   //*----------------------------------------------Funciones Que Modifican El Contador:
@@ -145,26 +146,12 @@ const Carrito = ({ openMenuCarrito, SetOpenMenuCarrito }: Props) => {
     <>
       {/*-------------------------------------CONTAINER CARRITO-----------------------------------*/}
 
-      <div
-        className={
-          openMenuCarrito
-            ? Style.ContainerCarritoOpen
-            : Style.ContainerCarritoOutside
-        }
-      >
-        <div className={Style.ContainerBoton}>
-          <button
-            className={Style.BtnOutsideMenuCarrito}
-            onClick={() => FuncionOutsideMenuCarrito()}
-          >
-            <FontAwesomeIcon icon={faTimes} />
-          </button>
-          <h3>Carrito de Compras</h3>
-        </div>
+      <div className={Style.ContainerCarritoOpen}>
+        <br />
+        <br />
+        <h3>Carrito de Compras</h3>
         {/*---------------------------Linea separadora Naranja------------------------*/}
-
         <div className={Style.LineaSeparadora}></div>
-
         {/*---------------------------------------------------------------------------*/}
         <div className={Style.ContainerCardCarrito}>
           {ArrayCarrito.map(
