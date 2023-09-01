@@ -113,7 +113,7 @@ const NavBar = () => {
             <a className={Style.DespliegeDeMenu} onClick={FuncionOpenMenu}>
               <div className={Style.Select}>
                 <div className={Style.ContainerFlechas}>
-                  <p>Cosas que te podrian interesar 🧐</p>
+                  <p>Cosas que pueden interesarte🧐</p>
                   <FontAwesomeIcon icon={faChevronDown} color="white" />
                 </div>
 
