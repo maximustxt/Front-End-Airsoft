@@ -44,7 +44,7 @@ const Login = () => {
           }`
         )
         .then((response) => {
-          UsuarioDeleteLocalStorage();
+          localStorage.removeItem("Usuarios");
           toast.error(response.data);
         })
         .catch((error: any) => {});
