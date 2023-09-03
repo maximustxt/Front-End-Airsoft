@@ -9,6 +9,7 @@ import NavBar from "../NavBar/NavBar";
 import HistoriaDeGuerraDetail from "./interface/HistoriaDeGuerra";
 //- Components:
 import Footer from "../Footer/Footer";
+import Loading from "../Loading/Loading";
 
 const DetailHistoriasDeGuerra = () => {
   const [Details, SetDetail]: any = useState({});
@@ -32,7 +33,7 @@ const DetailHistoriasDeGuerra = () => {
   return (
     <>
       <NavBar />
-      {Details ? (
+      {Details?.titulo ? (
         <div className={Style.Container}>
           <h1>{Details.titulo}</h1>
           <h2>Descripcion:</h2>
@@ -51,7 +52,7 @@ const DetailHistoriasDeGuerra = () => {
           </div>
         </div>
       ) : (
-        <h1>ERROR</h1>
+        <Loading />
       )}
       <br />
       <br />

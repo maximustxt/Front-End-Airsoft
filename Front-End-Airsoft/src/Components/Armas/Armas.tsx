@@ -9,6 +9,7 @@ import { Arma } from "./Interface/Armas";
 import Card from "../Card/Card";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
+import Loading from "../Loading/Loading";
 
 const Armas = () => {
   const [ArrayArmas, SetArrayArmas] = useState([]);
@@ -29,19 +30,23 @@ const Armas = () => {
   return (
     <>
       <NavBar />
-      <div className={Style.Container}>
-        {ArrayArmas.map(
-          ({ id, Imagen, paisDeCreacion, nombreDelArma, añosDeDesUso }) => (
-            <Card
-              Imagen={Imagen}
-              paisDeCreacion={paisDeCreacion}
-              nombreDelArma={nombreDelArma}
-              añosDeDesUso={añosDeDesUso}
-              id={id}
-            />
-          )
-        )}
-      </div>
+      {ArrayArmas.length ? (
+        <div className={Style.Container}>
+          {ArrayArmas.map(
+            ({ id, Imagen, paisDeCreacion, nombreDelArma, añosDeDesUso }) => (
+              <Card
+                Imagen={Imagen}
+                paisDeCreacion={paisDeCreacion}
+                nombreDelArma={nombreDelArma}
+                añosDeDesUso={añosDeDesUso}
+                id={id}
+              />
+            )
+          )}
+        </div>
+      ) : (
+        <Loading />
+      )}
       <br />
       <br />
       <br />

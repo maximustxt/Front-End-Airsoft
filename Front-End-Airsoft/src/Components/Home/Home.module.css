@@ -44,6 +44,10 @@
   flex-wrap: wrap;
 }
 
+.ContainerDiversosProductos p {
+  cursor: pointer;
+}
+
 @media (max-width: 500px) {
   .ContainerDiversosProductos {
     display: flex;

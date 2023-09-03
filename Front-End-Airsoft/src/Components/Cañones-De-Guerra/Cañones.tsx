@@ -6,6 +6,7 @@ import Style from "./Cañones.module.css";
 import Card from "../Card/Card";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
+import Loading from "../Loading/Loading";
 
 const Cañones = () => {
   const [Cañones, SetCañones] = useState([]);
@@ -26,19 +27,23 @@ const Cañones = () => {
   return (
     <>
       <NavBar />
-      <div className={Style.Container}>
-        {Cañones.map(
-          ({ id, Imagen, paisDeCreacion, nombreDelCañon, añosDeDesUso }) => (
-            <Card
-              Imagen={Imagen}
-              paisDeCreacion={paisDeCreacion}
-              nombreDelCañon={nombreDelCañon}
-              añosDeDesUso={añosDeDesUso}
-              id={id}
-            />
-          )
-        )}
-      </div>
+      {Cañones.length ? (
+        <div className={Style.Container}>
+          {Cañones.map(
+            ({ id, Imagen, paisDeCreacion, nombreDelCañon, añosDeDesUso }) => (
+              <Card
+                Imagen={Imagen}
+                paisDeCreacion={paisDeCreacion}
+                nombreDelCañon={nombreDelCañon}
+                añosDeDesUso={añosDeDesUso}
+                id={id}
+              />
+            )
+          )}
+        </div>
+      ) : (
+        <Loading />
+      )}
       <br />
       <br />
       <br />

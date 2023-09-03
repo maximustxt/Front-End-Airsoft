@@ -6,6 +6,7 @@ import Style from "./Naval.module.css";
 import Card from "../Card/Card";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
+import Loading from "../Loading/Loading";
 
 const Naval = () => {
   const [Naval, SetNaval] = useState([]);
@@ -26,19 +27,29 @@ const Naval = () => {
   return (
     <>
       <NavBar />
-      <div className={Style.Container}>
-        {Naval.map(
-          ({ id, Imagen, paisDeCreacion, nombreDelvehiculo, añosDeDesUso }) => (
-            <Card
-              Imagen={Imagen}
-              paisDeCreacion={paisDeCreacion}
-              nombreDelvehiculo={nombreDelvehiculo}
-              añosDeDesUso={añosDeDesUso}
-              id={id}
-            />
-          )
-        )}
-      </div>
+      {Naval.length ? (
+        <div className={Style.Container}>
+          {Naval.map(
+            ({
+              id,
+              Imagen,
+              paisDeCreacion,
+              nombreDelvehiculo,
+              añosDeDesUso,
+            }) => (
+              <Card
+                Imagen={Imagen}
+                paisDeCreacion={paisDeCreacion}
+                nombreDelvehiculo={nombreDelvehiculo}
+                añosDeDesUso={añosDeDesUso}
+                id={id}
+              />
+            )
+          )}
+        </div>
+      ) : (
+        <Loading />
+      )}
       <br />
       <br />
       <br />

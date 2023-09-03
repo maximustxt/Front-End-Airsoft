@@ -9,6 +9,7 @@ import NavBar from "../NavBar/NavBar";
 import Naval from "./Interfaces/Interfaces.Barcos";
 //- Components:
 import Footer from "../Footer/Footer";
+import Loading from "../Loading/Loading";
 
 const Detail = () => {
   const [Details, SetDetail]: any = useState({});
@@ -31,7 +32,7 @@ const Detail = () => {
     <>
       <NavBar />
 
-      {Details ? (
+      {Details?.Descripcion ? (
         <div className={Style.Container}>
           <h1>Descripcion:</h1>
           <div className={Style.containerParrafos}>
@@ -70,7 +71,7 @@ const Detail = () => {
             Details.ConflictosENDondeParticipo.map((e: string) => <p>*{e}</p>)}
         </div>
       ) : (
-        <h1>ERROR</h1>
+        <Loading />
       )}
       <br />
       <br />

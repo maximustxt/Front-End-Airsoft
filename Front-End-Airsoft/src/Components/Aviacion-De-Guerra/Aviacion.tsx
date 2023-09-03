@@ -9,6 +9,7 @@ import AviacionInterface from "./interface/Aviacion";
 import Card from "../Card/Card";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
+import Loading from "../Loading/Loading";
 
 const Aviacion = () => {
   const [ArrayAviacion, SetArrayAviacion] = useState([]);
@@ -29,19 +30,29 @@ const Aviacion = () => {
   return (
     <>
       <NavBar />
-      <div className={Style.Container}>
-        {ArrayAviacion.map(
-          ({ id, Imagen, paisDeCreacion, nombreDelvehiculo, añosDeDesUso }) => (
-            <Card
-              Imagen={Imagen}
-              paisDeCreacion={paisDeCreacion}
-              nombreDelvehiculo={nombreDelvehiculo}
-              añosDeDesUso={añosDeDesUso}
-              id={id}
-            />
-          )
-        )}
-      </div>
+      {ArrayAviacion.length ? (
+        <div className={Style.Container}>
+          {ArrayAviacion.map(
+            ({
+              id,
+              Imagen,
+              paisDeCreacion,
+              nombreDelvehiculo,
+              añosDeDesUso,
+            }) => (
+              <Card
+                Imagen={Imagen}
+                paisDeCreacion={paisDeCreacion}
+                nombreDelvehiculo={nombreDelvehiculo}
+                añosDeDesUso={añosDeDesUso}
+                id={id}
+              />
+            )
+          )}
+        </div>
+      ) : (
+        <Loading />
+      )}
       <br />
       <br />
       <br />

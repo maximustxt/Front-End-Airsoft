@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 //- LOCAL STORAGE:
 import UsuarioGetLocalStorage from "../LocalStorage/Usuario/UsuarioGetLocalStorage";
+import Loading from "../Loading/Loading";
 
 const Perfil = () => {
   const { user, isAuthenticated } = useAuth0();
@@ -36,7 +37,7 @@ const Perfil = () => {
   return (
     <>
       <NavBar />
-      {isAuthenticated && (
+      {isAuthenticated && user ? (
         <>
           <br />
           <br />
@@ -64,6 +65,8 @@ const Perfil = () => {
             </div>
           </div>
         </>
+      ) : (
+        <Loading />
       )}
     </>
   );

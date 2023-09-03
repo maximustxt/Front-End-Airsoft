@@ -15,6 +15,7 @@ import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import Loading from "../Loading/Loading";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -84,29 +85,34 @@ const Home = () => {
   return (
     <>
       <NavBar />
-      <div className={Style.ContainerDiversosProductos}>
-        {ArrayDeImagenesProductos.map((e) => (
-          <a onClick={() => FuncionRedirect(e.Nombre)}>
-            <div className={Style.Imagenes}>
-              <img src={e.Imagen} />
-              <p>{e.Nombre}</p>
-            </div>
-          </a>
-        ))}
-      </div>
-      {/*--------------------------------------------------------------*/}
-      <h1>Productos De Airsoft</h1>
-      <div className={Style.Container}>
-        {Productos.map(({ id, Imagen, Tipo, Name, Precio }) => (
-          <Card_Producto
-            id={id}
-            Imagen={Imagen}
-            Tipo={Tipo}
-            Name={Name}
-            Precio={Precio}
-          />
-        ))}
-      </div>
+
+      {!Productos.length ? (
+        <Loading />
+      ) : (
+        <>
+          <div className={Style.ContainerDiversosProductos}>
+            {ArrayDeImagenesProductos.map((e) => (
+              <div key={e.Nombre} className={Style.Imagenes}>
+                <img src={e.Imagen} alt={e.Nombre} />
+                <p onClick={() => FuncionRedirect(e.Nombre)}>{e.Nombre}</p>
+              </div>
+            ))}
+          </div>
+          <h1>Productos De Airsoft</h1>
+          <div className={Style.Container}>
+            {Productos.map(({ id, Imagen, Tipo, Name, Precio }) => (
+              <Card_Producto
+                key={id}
+                id={id}
+                Imagen={Imagen}
+                Tipo={Tipo}
+                Name={Name}
+                Precio={Precio}
+              />
+            ))}
+          </div>
+        </>
+      )}
       <Footer />
     </>
   );

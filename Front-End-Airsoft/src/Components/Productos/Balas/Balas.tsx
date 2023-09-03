@@ -12,6 +12,7 @@ import Style from "./Balas.module.css";
 import NavBar from "../../NavBar/NavBar";
 import Card_Producto from "../../Card-Productos/Card-Productos";
 import Footer from "../../Footer/Footer";
+import Loading from "../../Loading/Loading";
 
 const Balas = () => {
   const dispatch = useDispatch();
@@ -25,24 +26,30 @@ const Balas = () => {
   return (
     <>
       <NavBar />
-      <div className={Style.Container}>
-        <div className={Style.ContainerArticulos}>
-          {Productos.length
-            ? Productos?.filter(
-                (e: Producto) =>
-                  e.Tipo === "Caja de Munición" || e.Tipo === "Balas Airsoft"
-              ).map(({ id, Imagen, Tipo, Name, Precio }) => (
-                <Card_Producto
-                  id={id}
-                  Imagen={Imagen}
-                  Tipo={Tipo}
-                  Name={Name}
-                  Precio={Precio}
-                />
-              ))
-            : ""}
+
+      {Productos.length ? (
+        <div className={Style.Container}>
+          <div className={Style.ContainerArticulos}>
+            {Productos.length
+              ? Productos?.filter(
+                  (e: Producto) =>
+                    e.Tipo === "Caja de Munición" || e.Tipo === "Balas Airsoft"
+                ).map(({ id, Imagen, Tipo, Name, Precio }) => (
+                  <Card_Producto
+                    id={id}
+                    Imagen={Imagen}
+                    Tipo={Tipo}
+                    Name={Name}
+                    Precio={Precio}
+                  />
+                ))
+              : ""}
+          </div>
         </div>
-      </div>
+      ) : (
+        <Loading />
+      )}
+
       <br />
       <br />
       <br />

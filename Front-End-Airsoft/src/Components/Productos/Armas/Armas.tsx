@@ -12,6 +12,7 @@ import Style from "./Armas.module.css";
 import NavBar from "../../NavBar/NavBar";
 import Card_Producto from "../../Card-Productos/Card-Productos";
 import Footer from "../../Footer/Footer";
+import Loading from "../../Loading/Loading";
 
 const Armas = () => {
   const dispatch = useDispatch();
@@ -24,10 +25,12 @@ const Armas = () => {
     <>
       <NavBar />
       <div className={Style.Container}>
-        <div className={Style.ContainerArticulos}>
-          {Productos.length
-            ? Productos.filter((e: Producto) => e.Tipo === "Arma Airsoft").map(
-                ({ id, Imagen, Tipo, Name, Precio }) => (
+        {Productos.length ? (
+          <div className={Style.ContainerArticulos}>
+            {Productos.length
+              ? Productos.filter(
+                  (e: Producto) => e.Tipo === "Arma Airsoft"
+                ).map(({ id, Imagen, Tipo, Name, Precio }) => (
                   <Card_Producto
                     id={id}
                     Imagen={Imagen}
@@ -35,10 +38,12 @@ const Armas = () => {
                     Name={Name}
                     Precio={Precio}
                   />
-                )
-              )
-            : ""}
-        </div>
+                ))
+              : ""}
+          </div>
+        ) : (
+          <Loading />
+        )}
       </div>
       <br />
       <br />

@@ -15,6 +15,7 @@ import Style from "./DetailArticulosDeVenta.module.css";
 import UsuarioGetLocalStorage from "../LocalStorage/Usuario/UsuarioGetLocalStorage";
 //- Components:
 import Footer from "../Footer/Footer";
+import Loading from "../Loading/Loading";
 
 const DetailArticulosDeVenta = () => {
   const dispatch = useDispatch();
@@ -85,7 +86,7 @@ const DetailArticulosDeVenta = () => {
   return (
     <>
       <NavBar />
-      {Details ? (
+      {Details?.Name ? (
         <div className={Style.Container}>
           <br />
           <br />
@@ -127,7 +128,7 @@ const DetailArticulosDeVenta = () => {
           <Toaster position="bottom-left" reverseOrder={true} />
         </div>
       ) : (
-        <h1>ERROR</h1>
+        <Loading />
       )}
       <br />
       <br />
