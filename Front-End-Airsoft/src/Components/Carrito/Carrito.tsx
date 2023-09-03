@@ -151,30 +151,38 @@ const Carrito = () => {
         <div className={Style.ContainerCardCarrito}>
           {ArrayCarrito.map(
             ({ id, Imagen, PrecioUnitario, Name, Stock, Contador }) => (
-              <div className={Style.CardCarrito}>
-                <img src={Imagen} />
-                <p>{Name}</p>
-                <p className={Style.Precio}>Precio : {`$ ${PrecioUnitario}`}</p>
-                <button
-                  className={Style.BTNContador}
-                  onClick={() =>
-                    FuncionIncrementarContador(Stock, id, Contador)
-                  }
-                >
-                  <FontAwesomeIcon icon={faChevronLeft} />
-                  {/* Flecha hacia la izquierda */}
-                </button>
-                <p>{Contador}</p>
-                <button
-                  className={Style.BTNContador}
-                  onClick={() => FuncionDecrementarContador(id, Contador)}
-                >
-                  <FontAwesomeIcon icon={faChevronRight} />
-                </button>
-                <a onClick={() => FuncionEliminarCarrito(id)}>
-                  <FontAwesomeIcon icon={faTrash} color="red" />
-                </a>
-              </div>
+              <>
+                <div className={Style.CardCarrito}>
+                  <img src={Imagen} />
+                  <p>{Name}</p>
+                  <p className={Style.Precio}>
+                    Precio : {`$ ${PrecioUnitario}`}
+                  </p>
+
+                  <div className={Style.ContainerContador}>
+                    <button
+                      className={Style.BTNContador}
+                      onClick={() =>
+                        FuncionIncrementarContador(Stock, id, Contador)
+                      }
+                    >
+                      <FontAwesomeIcon icon={faChevronLeft} />
+                      {/* Flecha hacia la izquierda */}
+                    </button>
+                    <p>{Contador}</p>
+                    <button
+                      className={Style.BTNContador}
+                      onClick={() => FuncionDecrementarContador(id, Contador)}
+                    >
+                      <FontAwesomeIcon icon={faChevronRight} />
+                    </button>
+                  </div>
+                  <a onClick={() => FuncionEliminarCarrito(id)}>
+                    <FontAwesomeIcon icon={faTrash} color="red" />
+                  </a>
+                </div>
+                <hr />
+              </>
             )
           )}
         </div>
