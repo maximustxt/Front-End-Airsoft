@@ -123,7 +123,7 @@ section a:hover {
   display: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
   .ContainerIconoCarrito {
     margin-bottom: 50px;
   }
@@ -174,12 +174,19 @@ section a:hover {
   }
 }
 
-@media (max-whidt: 500px) {
-  .ContainerFlechas p {
-    font-size: 15px;
-    text-align: center;
+@media (max-width: 500px) {
+  .Icono {
+    width: 200px;
   }
-  .ContainerFlechas {
-    width: 300px;
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 20px;
+  }
+
+  .nav_items_Open {
+    top: 73px;
   }
 }
