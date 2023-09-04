@@ -18,7 +18,7 @@ npm start
 ```
 
 
-<h3>Video Explicativo :</h3>
+<h3>Videos Explicativos :</h3>
 
 
 https://github.com/maximustxt/Front-End-Airsoft/assets/119757609/3e65744b-c0d0-40d3-af03-4ac19f18ce0f
