@@ -43,15 +43,15 @@ const DetailArticulosDeVenta = () => {
 
   //---------------------------------COMPRAR PRODUCTO:
 
+  //https://servidor-airsoft.onrender.com
+
   const FuncionComprarProducto = () => {
     if (!UsuarioGetLocalStorage()) {
       toast.error("Debes Loguearte para poder comprar");
     } else {
       axios
         .post(
-          `https://servidor-airsoft.onrender.com/Carrito/${
-            UsuarioGetLocalStorage().id
-          }`,
+          `http://localhost:3004/Carrito/${UsuarioGetLocalStorage().id}`,
           Details
         )
         .then((response: { data: DetailArticulosDeVentas }) => {
