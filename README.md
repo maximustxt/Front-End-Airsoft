@@ -18,6 +18,45 @@ npm start
 ```
 
 
+<h3>Videos Explicativos :</h3>
+
+
+https://github.com/maximustxt/Front-End-Airsoft/assets/119757609/3e65744b-c0d0-40d3-af03-4ac19f18ce0f
+
+<br/>
+<br/>
+
+
+https://github.com/maximustxt/Front-End-Airsoft/assets/119757609/a28fa644-e48a-4aaf-acc5-709532a0d0a7
+
+
+<br/>
+<br/>
+
+
+https://github.com/maximustxt/Front-End-Airsoft/assets/119757609/a75b4910-5d94-4a86-87f6-14ebb005163e
+
+
+<br/>
+<br/>
+
+https://github.com/maximustxt/Front-End-Airsoft/assets/119757609/263c887c-5889-463d-8b69-34c0cb8ff208
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br/>
 <br/>
 
